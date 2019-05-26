@@ -1,0 +1,1 @@
+# webpack-fivem-manifest
