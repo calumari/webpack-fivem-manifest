@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/2277/webpack-fivem-manifest#readme",
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.13"
   }
 }
