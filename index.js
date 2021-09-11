@@ -29,15 +29,11 @@ ResourceManifestPlugin.prototype.apply = function(compiler) {
 
 function format(assets, path) {
   return `
-  name 'resource name'
-  fx_version 'cerulean'
-  games { 'gta5', 'rdr3 }
+name 'resource name'
+fx_version 'cerulean'
+games { 'gta5', 'rdr3 }
   
-  shared_scripts { 'config.lua' }
-  client_scripts { 'client.lua' }
-  server_scripts { 'server.lua' }
-  
-  ui_page "${path}/index.html"
+ui_page "${path}/index.html"
 
 files{${assets.map(asset => `"${path}/${asset}"`).join(',')}}
   `;
