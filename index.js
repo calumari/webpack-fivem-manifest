@@ -3,7 +3,7 @@ const path = require('path');
 
 const defaultOptions = {
   itemsFromCompilation: compilation => Object.keys(compilation.assets),
-  output: '../__resource.lua',
+  output: '../fxmanifest.lua',
 };
 
 function ResourceManifestPlugin(options) {
@@ -29,6 +29,10 @@ ResourceManifestPlugin.prototype.apply = function(compiler) {
 
 function format(assets, path) {
   return `
+name 'resource name'
+fx_version 'cerulean'
+games { 'gta5', 'rdr3 }
+  
 ui_page "${path}/index.html"
 
 files{${assets.map(asset => `"${path}/${asset}"`).join(',')}}
